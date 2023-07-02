@@ -3,10 +3,10 @@ import logo from '../image/logo.png';
 
 export default function Navbar() {
     return(
-        <div className="flex justify-between mt-6 border-b-2">
-            <div className="">
-                <img src="../image/logo.png" alt="logo" className="w-full h-full"></img>
-            </div>
+        <div className="flex justify-between my-2 border-b-2 px-10 py-4">
+            <button className="">
+                   <img src={logo} className="object-fill h-7" alt="Logo"/>
+            </button>
             <div className="border rounded-full hover:shadow-lg">
                 <div className="flex gap-2 p-2">
                     <button className="border-r-2 pr-8">
