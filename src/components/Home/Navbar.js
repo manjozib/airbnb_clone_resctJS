@@ -1,33 +1,42 @@
 import React from "react";
 import logo from '../image/logo.png';
+import logo_only from '../image/logoOnly.png';
 
 export default function Navbar() {
     return(
-        <div className="flex justify-between my-2 border-b-2 px-10 py-4">
-            <button className="">
-                   <img src={logo} className="object-fill h-7" alt="Logo"/>
+        <div className="sm:flex sm:justify-between my-2 sm:border-b-2 sm:px-10 sm:py-4">
+            <button className="hidden sm:block">
+                <img src={logo} className="object-fill h-7 hidden lg:block" alt="Logo" />
+                <img src={logo_only} className="object-fill h-7 lg:hidden" alt="Logo"/>
             </button>
-            <div className="border rounded-full hover:shadow-lg">
+            <div className="shadow-lg mx-4 border rounded-full sm:shadow-none sm:hover:shadow-lg">
                 <div className="flex gap-2 p-2">
-                    <button className="border-r p px-4 font-semibold">
+                    <button className="order-2 sm:order-1 sm:border-r p px-4 font-semibold">
                         Anywhere
                     </button>
-                    <button className="border-r px-4 font-semibold">
+                    <button className="order-3 sm:order-2 sm:border-r px-4 sm:font-semibold">
                         Any week
                     </button>
-                    <button className="px-4 text-gray-400">
+                    <button className="order-4 px-4 text-gray-400 sm:order-3">
                         Add Guest
                     </button>
-                    <button className="bg-red-400 rounded-full w-6 h-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-4 h-4 text-white">
+                    <button className="order-1 sm:bg-red-400 sm:order-4 rounded-full w-6 h-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" className="w-5 h-5 text-black sm:text-white">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+
+                    </button>
+                    <button className="order-5 border rounded-full sm:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" 
+                        stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
                         </svg>
 
                     </button>
                 </div>
             </div>
-            <div className="">
-                <div className="flex gap-1">
+            <div className="hidden sm:block">
+                <div className="sm:flex gap-1">
                     <button className="rounded-full text-sm font-semibold hover:bg-gray-50 p-2">Airbnb your home</button>
                     <button className="rounded-full w-8 h-8 p-2 items-center justify-center hover:bg-gray-50">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -42,7 +51,6 @@ export default function Navbar() {
                         stroke="currentColor" class="w-5 h-5 m-2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                         </svg>
-
 
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" className="w-8 h-8 m-1">
